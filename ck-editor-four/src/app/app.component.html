@@ -1,3 +1,10 @@
 <h1>App worked</h1>
 
-<ckeditor   [config]="config" data="<p>Hello, world!</p>"></ckeditor>
+
+<form [formGroup]="myForm" (ngSubmit)="submit()" class="form-horizontal" role="form">
+  <ckeditor [config]="config" data="<p>Hello, world!</p>" formControlName="description"></ckeditor>
+
+  <button type="submit">Submit</button>
+</form>
+<br><br><br>
+<div [innerHTML]="htmlValue"></div>

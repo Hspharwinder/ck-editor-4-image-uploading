@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ck-editor-four';
-
+  public data:String = "";
     /* Ckeditor  */
     public config = {
       uiColor: '#F0F3F4',
@@ -30,4 +31,22 @@ export class AppComponent {
         { name: 'colors' }*/
       ]
     };
+  myForm: FormGroup;
+  htmlValue: any;
+
+    constructor(private formBuilder: FormBuilder) {
+
+    }
+
+    ngOnInit(): void {
+      this.myForm = this.formBuilder.group({
+        description: ['initial data', [Validators.required,]],
+      });
+    }
+
+    submit(): void {
+
+      this.htmlValue = this.myForm.value.description;
+      console.log(this.myForm.value.description)
+    }
 }
