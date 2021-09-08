@@ -9,8 +9,11 @@ https://ckeditor.com/docs/ckeditor4/latest/features/toolbarconcepts.html
 https://ckeditor.com/docs/ckeditor4/latest/features/toolbar.html
 https://ckeditor.com/docs/ckeditor4/latest/examples/toolbar.html
 
- toolbarGroups: [{
-          "name": "basicstyles",
+ 
+ toolbarGroups:
+ 
+	[{		
+	      "name": "basicstyles",
           "groups": ["basicstyles"]
         },
         {
