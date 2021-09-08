@@ -9,7 +9,8 @@ https://ckeditor.com/docs/ckeditor4/latest/features/toolbarconcepts.html
 https://ckeditor.com/docs/ckeditor4/latest/features/toolbar.html
 https://ckeditor.com/docs/ckeditor4/latest/examples/toolbar.html
 
- 
+  public config = {
+  
  toolbarGroups:
  
 	[{		
@@ -43,4 +44,5 @@ https://ckeditor.com/docs/ckeditor4/latest/examples/toolbar.html
       ],
       // Remove the redundant buttons from toolbar groups defined above.
       removeButtons: 'Underline,Strike,Subscript,Superscript,Anchor,Styles,Specialchar,PasteFromWord'
-    });
+  });
+
